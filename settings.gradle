@@ -1,0 +1,2 @@
+include ':app', ':LLNWStreaming'
+rootProject.name='RTS V2 Test Application'

@@ -1,0 +1,105 @@
+2020-05-06 16:10:08.501 19225-19225/com.llnwrts.app I/RTCSubscriber: http://rtsv2-poc-2.devnet.llnw.net:3000/public/live/discovery/v1/poliva/test-slot-1
+2020-05-06 16:10:08.824 19225-19225/com.llnwrts.app I/RTCSubscriber: Discovery Response: ["http://rtsv2-poc-2.devnet.llnw.net:3000/public/live/client/B054C1DF-BA50-43FC-82F3-41B5C0CB05F8/primary/session"]
+2020-05-06 16:10:09.076 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Opened ws
+2020-05-06 16:10:09.080 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"activeVariant":"1000","thisEdge":{"iceServers":[],"socketURL":"wss://10.12.161.133/public/live/client/B054C1DF-BA50-43FC-82F3-41B5C0CB05F8/primary/session"},"traceId":"p1n1.1.626","type":"init","variants":[]}
+2020-05-06 16:10:09.432 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"object":{"map":{},"version":0},"type":"dataobject.broadcast"}
+2020-05-06 16:10:09.432 19225-19610/com.llnwrts.app I/RTCSubscriber: onDataObjectBroadcast: com.llnwrts.streaming.types.Message.LLDataBroadcastMessage@c432f9a
+2020-05-06 16:10:09.432 19225-19610/com.llnwrts.app D/RTCSubscriber: Count key not found on broadcast message.
+2020-05-06 16:10:09.432 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Data Object.
+2020-05-06 16:10:09.433 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"activeProfiles":["1000","1800","2400"],"type":"active-profiles"}
+2020-05-06 16:10:09.434 19225-19610/com.llnwrts.app D/RTCSubscriber:LLSocketClient: Unrecognized Socket Type: {"activeProfiles":["1000","1800","2400"],"type":"active-profiles"}
+2020-05-06 16:10:09.467 19225-19620/com.llnwrts.app I/RTCSubscriber: onSignalingChange: HAVE_LOCAL_OFFER
+2020-05-06 16:10:09.476 19225-19620/com.llnwrts.app I/RTCSubscriber: Local description set.
+2020-05-06 16:10:09.541 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"sdp.offer","offer":"v=0\r\no=- 5482807017184484758 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0 1\r\na=msid-semantic: WMS\r\nm=audio 9 UDP\/TLS\/RTP\/SAVPF 111 103 104 9 102 0 8 106 105 13 110 112 113 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:LvP5\r\na=ice-pwd:Dec5hMOUzwP+yTJp+onWKovm\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 8A:FF:84:C3:71:F1:E5:98:BE:83:6D:B7:57:F0:17:EB:D7:FD:80:CF:FB:81:2A:A7:23:A3:6C:2C:D5:DB:64:1F\r\na=setup:actpass\r\na=mid:0\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:2 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:5 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=recvonly\r\na=rtcp-mux\r\na=rtpmap:111 opus\/48000\/2\r\na=rtcp-fb:111 transport-cc\r\na=fmtp:111 minptime=10;useinbandfec=1\r\na=rtpmap:103 ISAC\/16000\r\na=rtpmap:104 ISAC\/32000\r\na=rtpmap:9 G722\/8000\r\na=rtpmap:102 ILBC\/8000\r\na=rtpmap:0 PCMU\/8000\r\na=rtpmap:8 PCMA\/8000\r\na=rtpmap:106 CN\/32000\r\na=rtpmap:105 CN\/16000\r\na=rtpmap:13 CN\/8000\r\na=rtpmap:110 telephone-event\/48000\r\na=rtpmap:112 telephone-event\/32000\r\na=rtpmap:113 telephone-event\/16000\r\na=rtpmap:126 telephone-event\/8000\r\nm=video 9 UDP\/TLS\/RTP\/SAVPF 96 97 98 99 100 101 127 124 125\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:LvP5\r\na=ice-pwd:Dec5hMOUzwP+yTJp+onWKovm\r\na=ice-options:trickle renomination\r\na=fingerprint:sha-256 8A:FF:84:C3:71:F1:E5:98:BE:83:6D:B7:57:F0:17:EB:D7:FD:80:CF:FB:81:2A:A7:23:A3:6C:2C:D5:DB:64:1F\r\na=setup:actpass\r\na=mid:1\r\na=extmap:14 urn:ietf:params:rtp-hdrext:toffset\r\na=extmap:13 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/abs-send-time\r\na=extmap:12 urn:3gpp:video-orientation\r\na=extmap:2 http:\/\/www.ietf.org\/id\/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:11 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/playout-delay\r\na=extmap:6 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-content-type\r\na=extmap:7 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/video-timing\r\na=extmap:8 http:\/\/tools.ietf.org\/html\/draft-ietf-avtext-framemarking-07\r\na=extmap:9 http:\/\/www.webrtc.org\/experiments\/rtp-hdrext\/color-space\r\na=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:5 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=recvonly\r\na=rtcp-mux\r\na=rtcp-rsize\r\na=rtpmap:96 VP8\/90000\r\na=rtcp-fb:96 goog-remb\r\na=rtcp-fb:96 transport-cc\r\na=rtcp-fb:96 ccm fir\r\na=rtcp-fb:96 nack\r\na=rtcp-fb:96 nack pli\r\na=rtpmap:97 rtx\/90000\r\na=fmtp:97 apt=96\r\na=rtpmap:98 VP9\/90000\r\na=rtcp-fb:98 goog-remb\r\na=rtcp-fb:98 transport-cc\r\na=rtcp-fb:98 ccm fir\r\na=rtcp-fb:98 nack\r\na=rtcp-fb:98 nack pli\r\na=rtpmap:99 rtx\/90000\r\na=fmtp:99 apt=98\r\na=rtpmap:100 H264\/90000\r\na=rtcp-fb:100 goog-remb\r\na=rtcp-fb:100 transport-cc\r\na=rtcp-fb:100 ccm fir\r\na=rtcp-fb:100 nack\r\na=rtcp-fb:100 nack pli\r\na=fmtp:100 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f\r\na=rtpmap:101 rtx\/90000\r\na=fmtp:101 apt=100\r\na=rtpmap:127 red\/90000\r\na=rtpmap:124 rtx\/90000\r\na=fmtp:124 apt=127\r\na=rtpmap:125 ulpfec\/90000\r\n"}
+2020-05-06 16:10:09.541 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceGatheringChange: GATHERING
+2020-05-06 16:10:09.542 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.548 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3659473419 1 udp 2122063616 192.168.0.14 42379 typ host generation 0 ufrag LvP5 network-id 4 network-cost 10","index":0}
+2020-05-06 16:10:09.548 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.556 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:559267639 1 udp 2122005760 ::1 53873 typ host generation 0 ufrag LvP5 network-id 2","index":0}
+2020-05-06 16:10:09.557 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.559 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1510613869 1 udp 2121932544 127.0.0.1 48535 typ host generation 0 ufrag LvP5 network-id 1","index":0}
+2020-05-06 16:10:09.559 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.561 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3659473419 1 udp 2122063616 192.168.0.14 48619 typ host generation 0 ufrag LvP5 network-id 4 network-cost 10","index":1}
+2020-05-06 16:10:09.561 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.563 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:559267639 1 udp 2122005760 ::1 41150 typ host generation 0 ufrag LvP5 network-id 2","index":1}
+2020-05-06 16:10:09.563 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.566 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1510613869 1 udp 2121932544 127.0.0.1 43043 typ host generation 0 ufrag LvP5 network-id 1","index":1}
+2020-05-06 16:10:09.566 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.570 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3016357459 1 tcp 1518283007 2607:fcc8:bcc8:b500:516d:2fa7:c405:8a49 9 typ host tcptype active generation 0 ufrag LvP5 network-id 6 network-cost 10","index":0}
+2020-05-06 16:10:09.570 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.572 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:2493308667 1 tcp 1518214911 192.168.0.14 9 typ host tcptype active generation 0 ufrag LvP5 network-id 5 network-cost 10","index":0}
+2020-05-06 16:10:09.572 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.575 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:593386261 1 tcp 1518151935 2600:380:a3ed:787e:29d9:3d28:3497:d531 9 typ host tcptype active generation 0 ufrag LvP5 network-id 3 network-cost 900","index":0}
+2020-05-06 16:10:09.575 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.577 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1876313031 1 tcp 1518025983 ::1 34573 typ host tcptype passive generation 0 ufrag LvP5 network-id 2","index":0}
+2020-05-06 16:10:09.577 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.579 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:344579997 1 tcp 1517952767 127.0.0.1 34389 typ host tcptype passive generation 0 ufrag LvP5 network-id 1","index":0}
+2020-05-06 16:10:09.579 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.581 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3016357459 1 tcp 1518283007 2607:fcc8:bcc8:b500:516d:2fa7:c405:8a49 9 typ host tcptype active generation 0 ufrag LvP5 network-id 6 network-cost 10","index":1}
+2020-05-06 16:10:09.584 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.588 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:2493308667 1 tcp 1518214911 192.168.0.14 9 typ host tcptype active generation 0 ufrag LvP5 network-id 5 network-cost 10","index":1}
+2020-05-06 16:10:09.588 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.592 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:593386261 1 tcp 1518151935 2600:380:a3ed:787e:29d9:3d28:3497:d531 9 typ host tcptype active generation 0 ufrag LvP5 network-id 3 network-cost 900","index":1}
+2020-05-06 16:10:09.592 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.596 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1876313031 1 tcp 1518025983 ::1 60090 typ host tcptype passive generation 0 ufrag LvP5 network-id 2","index":1}
+2020-05-06 16:10:09.596 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:09.598 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:344579997 1 tcp 1517952767 127.0.0.1 51345 typ host tcptype passive generation 0 ufrag LvP5 network-id 1","index":1}
+2020-05-06 16:10:09.676 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"activeVariant":"1000","type":"quality-change"}
+2020-05-06 16:10:09.792 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"response":"v=0\no=- 8780621618872637308 2 IN IP4 127.0.0.1\ns=-\nt=0 0\nm=audio 9 UDP/TLS/RTP/SAVPF 111\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:RH5a\na=ice-pwd:lWZ4NVSPNlJdbMUk9s4hp4pz\na=fingerprint:sha-256 8E:C6:39:AD:9B:5A:54:C8:05:B9:F6:D1:72:87:CD:19:34:05:9A:DF:B4:38:33:76:9A:E9:15:20:4F:65:F3:6B\na=setup:passive\na=sendonly\na=rtcp-mux\na=rtpmap:111 opus/48000/2\na=fmtp:111 minptime=10;useinbandfec=0;stereo=0;sprop-stereo=0\na=ssrc:256 cname:p1n1.1.626\nm=video 9 UDP/TLS/RTP/SAVPF 100\nc=IN IP4 0.0.0.0\na=rtcp:9 IN IP4 0.0.0.0\na=ice-ufrag:MIy9\na=ice-pwd:XoV9nZdrWHTw553YMHT89Uxo\na=fingerprint:sha-256 8E:C6:39:AD:9B:5A:54:C8:05:B9:F6:D1:72:87:CD:19:34:05:9A:DF:B4:38:33:76:9A:E9:15:20:4F:65:F3:6B\na=setup:passive\na=sendonly\na=rtcp-mux\na=rtcp-rsize\na=rtpmap:100 H264/90000\na=fmtp:100 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f;\na=ssrc:512 cname:p1n1.1.626\n","type":"sdp.offer-response"}
+2020-05-06 16:10:09.792 19225-19610/com.llnwrts.app I/RTCSubscriber: Handling offer response.
+2020-05-06 16:10:09.804 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.done"}
+2020-05-06 16:10:09.804 19225-19620/com.llnwrts.app I/RTCSubscriber: onSignalingChange: STABLE
+2020-05-06 16:10:10.009 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceConnectionChange: CHECKING
+2020-05-06 16:10:10.012 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1org.webrtc.AudioTrack@514ab66
+2020-05-06 16:10:10.013 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1 video tracks[org.webrtc.VideoTrack@cea3ea7]
+2020-05-06 16:10:10.013 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1 audio tracks
+2020-05-06 16:10:10.013 19225-19620/com.llnwrts.app D/RTCSubscriber: Volume set to 5
+2020-05-06 16:10:10.014 19225-19620/com.llnwrts.app I/RTCSubscriber: Adding video track to renderer!
+2020-05-06 16:10:10.024 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1org.webrtc.VideoTrack@afdbf54
+2020-05-06 16:10:10.024 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1 video tracks[org.webrtc.VideoTrack@cea3ea7]
+2020-05-06 16:10:10.027 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddTrack: 1 audio tracks
+2020-05-06 16:10:10.027 19225-19620/com.llnwrts.app D/RTCSubscriber: Volume set to 5
+2020-05-06 16:10:10.028 19225-19620/com.llnwrts.app I/RTCSubscriber: Adding video track to renderer!
+2020-05-06 16:10:10.030 19225-19620/com.llnwrts.app I/RTCSubscriber: onAddStream: 1
+2020-05-06 16:10:10.031 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:10.033 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"candidate":"candidate:2264098815 1 udp 2113929728 10.12.161.133 44297 typ host generation 0 ufrag RH5a network-id 1","index":0,"type":"ice.candidate"}
+2020-05-06 16:10:10.034 19225-19610/com.llnwrts.app I/RTCSubscriber: handleCandidate received a candidate{"candidate":"candidate:2264098815 1 udp 2113929728 10.12.161.133 44297 typ host generation 0 ufrag RH5a network-id 1","index":0,"type":"ice.candidate"}
+2020-05-06 16:10:10.034 19225-19610/com.llnwrts.app I/RTCSubscriber: Enqueueing candidate.
+2020-05-06 16:10:10.035 19225-19610/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"candidate":"candidate:2264098815 1 udp 2113929727 10.12.161.133 42808 typ host generation 0 ufrag MIy9 network-id 1","index":1,"type":"ice.candidate"}
+2020-05-06 16:10:10.036 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3518052687 1 tcp 1518151935 2600:380:a353:ad48:c08d:a78f:9ccb:19ef 9 typ host tcptype active generation 0 ufrag LvP5 network-id 8 network-cost 900","index":0}
+2020-05-06 16:10:10.036 19225-19610/com.llnwrts.app I/RTCSubscriber: handleCandidate received a candidate{"candidate":"candidate:2264098815 1 udp 2113929727 10.12.161.133 42808 typ host generation 0 ufrag MIy9 network-id 1","index":1,"type":"ice.candidate"}
+2020-05-06 16:10:10.036 19225-19610/com.llnwrts.app I/RTCSubscriber: Enqueueing candidate.
+2020-05-06 16:10:10.036 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:10.040 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1466256536 1 tcp 1518018303 10.144.157.149 9 typ host tcptype active generation 0 ufrag LvP5 network-id 7 network-cost 900","index":0}
+2020-05-06 16:10:10.040 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:10.042 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:3518052687 1 tcp 1518151935 2600:380:a353:ad48:c08d:a78f:9ccb:19ef 9 typ host tcptype active generation 0 ufrag LvP5 network-id 8 network-cost 900","index":1}
+2020-05-06 16:10:10.042 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceCandidate:
+2020-05-06 16:10:10.044 19225-19620/com.llnwrts.app I/RTCSubscriber: {"type":"ice.candidate","candidate":"candidate:1466256536 1 tcp 1518018303 10.144.157.149 9 typ host tcptype active generation 0 ufrag LvP5 network-id 7 network-cost 900","index":1}
+2020-05-06 16:10:10.044 19225-19620/com.llnwrts.app I/RTCSubscriber: Remote description set.
+2020-05-06 16:10:10.044 19225-19620/com.llnwrts.app I/RTCSubscriber: adding all enqueued candidates.
+2020-05-06 16:10:10.044 19225-19620/com.llnwrts.app I/RTCSubscriber: Adding 0:0:candidate:2264098815 1 udp 2113929728 10.12.161.133 44297 typ host generation 0 ufrag RH5a network-id 1:
+2020-05-06 16:10:10.046 19225-19620/com.llnwrts.app I/RTCSubscriber: Adding 1:1:candidate:2264098815 1 udp 2113929727 10.12.161.133 42808 typ host generation 0 ufrag MIy9 network-id 1:
+2020-05-06 16:10:10.542 19225-19620/com.llnwrts.app I/RTCSubscriber: onIceConnectionChange: CONNECTED
+2020-05-06 16:10:10.579 19225-19620/com.llnwrts.app I/RTCSubscriber: RTC Stats:
+    { timestampUs: 1588795810544804, stats: [
+    { timestampUs: 1588795810544804, type: certificate, id: RTCCertificate_8A:FF:84:C3:71:F1:E5:98:BE:83:6D:B7:57:F0:17:EB:D7:FD:80:CF:FB:81:2A:A7:23:A3:6C:2C:D5:DB:64:1F, fingerprint: "8A:FF:84:C3:71:F1:E5:98:BE:83:6D:B7:57:F0:17:EB:D7:FD:80:CF:FB:81:2A:A7:23:A3:6C:2C:D5:DB:64:1F", fingerprintAlgorithm: "sha-256", base64Certificate: "MIIBFjCBvaADAgECAgkA5vF2sZMNetcwCgYIKoZIzj0EAwIwETEPMA0GA1UEAwwGV2ViUlRDMB4XDTIwMDUwNTIwMTAwOVoXDTIwMDYwNTIwMTAwOVowETEPMA0GA1UEAwwGV2ViUlRDMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEl0xovax6IzuM9e22oP9WvQPZ5EMOXZ5aGxLJyc9la8cnvEmA93B4zA/3NC45gdW0C7ZX+H2prFVxRHEIfszOHzAKBggqhkjOPQQDAgNIADBFAiEA18f/D5EDmhzH2HzfP/knYRTpSjhQAMiF2zmzfERJZw0CIF/6zd/J2Znmf5sasIJEuKPi1sFgjC1A92zQfXPY5Y5x" },
+    { timestampUs: 1588795810544804, type: certificate, id: RTCCertificate_8E:C6:39:AD:9B:5A:54:C8:05:B9:F6:D1:72:87:CD:19:34:05:9A:DF:B4:38:33:76:9A:E9:15:20:4F:65:F3:6B, fingerprint: "8E:C6:39:AD:9B:5A:54:C8:05:B9:F6:D1:72:87:CD:19:34:05:9A:DF:B4:38:33:76:9A:E9:15:20:4F:65:F3:6B", fingerprintAlgorithm: "sha-256", base64Certificate: "MIIBJjCBzKADAgECAgoBceucJRb7CVtTMAoGCCqGSM49BAMCMBYxFDASBgNVBAMMC2lkM2FzLm1lZGlhMB4XDTIwMDUwNTIwMTAxMVoXDTIxMDUwNTIwMTAxMVowFjEUMBIGA1UEAwwLaWQzYXMubWVkaWEwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASsI5WQwGrunTi7f4+AO2+m6Sgzfckls2/7FZwpYBxzDw4EK6znsFjMLEnyMPhXHUJBacrABmCok6iDHs4Y1j38owIwADAKBggqhkjOPQQDAgNJADBGAiEAxsi7OErK1Vvd94KC1mU0PByZ9Rj+7hygaL5BbMe/WbICIQCZGXcEaYWcvymT3CTQoU7RWtANSGP6K9+WIVnnXXZ6eA==" },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_0, payloadType: 0, mimeType: "audio/PCMU", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_102, payloadType: 102, mimeType: "audio/ILBC", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_103, payloadType: 103, mimeType: "audio/ISAC", clockRate: 16000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_104, payloadType: 104, mimeType: "audio/ISAC", clockRate: 32000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_105, payloadType: 105, mimeType: "audio/CN", clockRate: 16000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_106, payloadType: 106, mimeType: "audio/CN", clockRate: 32000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_110, payloadType: 110, mimeType: "audio/telephone-event", clockRate: 48000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_111, payloadType: 111, mimeType: "audio/opus", clockRate: 48000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_112, payloadType: 112, mimeType: "audio/telephone-event", clockRate: 32000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_113, payloadType: 113, mimeType: "audio/telephone-event", clockRate: 16000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_126, payloadType: 126, mimeType: "audio/telephone-event", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_13, payloadType: 13, mimeType: "audio/CN", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_8, payloadType: 8, mimeType: "audio/PCMA", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Inbound_9, payloadType: 9, mimeType: "audio/G722", clockRate: 8000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_0_Outbound_111, payloadType: 111, mimeType: "audio/opus", clockRate: 48000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_1_Inbound_100, payloadType: 100, mimeType: "video/H264", clockRate: 90000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_1_Inbound_101, payloadType: 101, mimeType: "video/rtx", clockRate: 90000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_1_Inbound_124, payloadType: 124, mimeType: "video/rtx", clockRate: 90000 },
+    { timestampUs: 1588795810544804, type: codec, id: RTCCodec_1_Inbound_125, payload

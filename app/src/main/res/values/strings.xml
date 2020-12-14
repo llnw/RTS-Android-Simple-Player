@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RTS V2 Test Application</string>
+    <string name="fps">FPS: 0</string>
+    <string name="host">host</string>
+    <string name="app">app</string>
+    <string name="streamName">streamName</string>
+    <string name="mvUrl">mvUrl</string>
+</resources>
