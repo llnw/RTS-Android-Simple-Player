@@ -1,9 +1,6 @@
 #### Jump to a section
 [ Setup ](#setup) | 
-[ Building the Library ](#building) | 
 [ API ](#api) | 
-[ Testing ](#testing)
-
 
 
 <a name="setup"></a>
@@ -16,21 +13,6 @@
 3. Wait for Android Studio to sync the project files
 
 4. Click Green run arrow to build and run test app.
-
-<a name="building"></a>
-## Building Library
-
-1. Go to Build -> Generate Signed APK bundle
-
-2. Select "APK"
-
-3. Set up key store variables -- can use placeholders for test and debug builds.
-
-4. Choose release or debug build.
-
-5. Choose v2 APK
-
-6. Build and drop APK file in JniLibs of another app to use it.
 
 <a name="api"></a>
 # API
@@ -137,56 +119,3 @@ Increment kay-value pair.
 Decrement key-value pair.
 #### public void dataObjectCAS(ArrayList keys, String compare, String swap, boolean createIfKeyMissing, String senderRef)
 Compare and swap key-value pair. (Replace value if equal to compare param)
-
-<a name="testing"></a>
-## Testing
-1. In `com/llnwrts/app/MainActivity.java` locate the private method `initClient` and set the configs for your subscriber.
-   
-   ```java
-       configJsonObject.put("app", "mmddev001");
-       configJsonObject.put("host", "rtsv2-poc-1.devnet.llnw.net");
-       configJsonObject.put("edgeHost", "rtsv2-poc-1.devnet.llnw.net");
-       configJsonObject.put("protocol", "http");
-       configJsonObject.put("port", "3000");
-       configJsonObject.put("streamName", "llnw-test-003")
-   ```
-   
-2. Download Cisco AnyConnect on your Android device and connect to remote.llnw.com VPN.
-   
-3. Begin ingest into your chosen slot through method of your choice. Ingest should have 1000 and 1800 kbps variants to test BR switching.
-   
-4. Launch the app from Android Studio and press Start.
-   
-5. Currently, if you filter on `RTCSubscriber` in Logcat, you will see all the logs.
-
-6. Video should begin to play with sound. Log files should look something similar to [this example](docs/sample_log.txt)
-
-7. Pressing "Mute" should mute the sound. Moving the volume slider should have no effect now. Additionally, if the stream must autorestart for some reason, the volume sould remain muted when playback resumes.
-
-8. Unmute the sound and slider the volume slider (below the mute button) up and down. Volume should change accordingly if not muted. If you mute the sound and turn the volume all the way up, it should be all the way up when unmuted.
-
-9. Press "Decrement" as many times as you like. Count in upper right corner of video should decrease accordingly. Logs should show all associated sent/received websocket messages. 
-
-10. Press "Increment" as many times as you like. Count in upper right corner of video should increase accordingly. Logs should show all associated sent/received websocket messages.
-
-11. Press "Say Hello". "Hello World" should appear in video box. Logs should show all associated sent/received websocket messages.
-
-12. Press "Set Quality 1800". Watermark should show "1800kbps". Logs should show all associated sent/received websocket messages.
-
-13. Press "Set Quality 1000". Watermark should show "1000kbps". Logs should show all associated sent/received websocket messages.
-
-### Media Vault Testing
-1. Add  "validation_url": "https://subscribe-validator.rts.llnwi.net/mmddev001/auth/v2/llnw-test-001/?ci=100&cd=100&cf=1600000000&h=c0518fc5aa957b128147545dfe45cc0f" to the config JSON object.
-2. Subscribe to stream like normal.
-3. Init websocket message should have a validation cookie. `{... "validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282329&h=60a8479a96fbf86b106e0d91bd948706", ...}`
-4. Validation Cookie should be shuttled back and forth between ping messages, changing about every second, e.g:
-```
-2020-06-04 10:52:22.576 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Client sent to websocket: {"type":"ping","validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282442&h=59f382a21edbeb98a188c32577964a84"}
-2020-06-04 10:52:22.801 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282442&h=59f382a21edbeb98a188c32577964a84","type":"pong"}
-2020-06-04 10:52:22.802 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Client sent to websocket: {"type":"ping","validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282442&h=59f382a21edbeb98a188c32577964a84"}
-2020-06-04 10:52:23.021 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282443&h=4b9d29640edbe30b00d12175d2dbadd4","type":"pong"}
-2020-06-04 10:52:23.021 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Client sent to websocket: {"type":"ping","validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282443&h=4b9d29640edbe30b00d12175d2dbadd4"}
-2020-06-04 10:52:23.237 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Received: {"validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282443&h=4b9d29640edbe30b00d12175d2dbadd4","type":"pong"}
-2020-06-04 10:52:23.238 6822-6862/com.llnwrts.app I/RTCSubscriber:LLSocketClient: Client sent to websocket: {"type":"ping","validationCookie":"__llnw_hashsecret=cf=1600000000&cd=100&e=1591282443&h=4b9d29640edbe30b00d12175d2dbadd4"}
-```
-
