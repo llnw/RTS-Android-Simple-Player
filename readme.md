@@ -87,9 +87,9 @@ Update key-value pair in data object.
 Add item to list in key.
 #### public void dataObjectDelete(ArrayList keys, boolean failIfKeyMissing)
 Delete key-value pair from data object.
-#### public void dataObjectInc (ArrayList<String> keys, double increment, String senderRef, boolean createIfKeyMissing)
+#### public void dataObjectInc (ArrayList<String> keys, double increment, boolean createIfKeyMissing)
 Increment kay-value pair.
-#### public void dataObjectDec(ArrayList<String> keys, double increment, String senderRef, boolean createIfKeyMissing)
+#### public void dataObjectDec(ArrayList<String> keys, double increment, boolean createIfKeyMissing)
 Decrement key-value pair.
-#### public void dataObjectCAS(ArrayList keys, String compare, String swap, boolean createIfKeyMissing, String senderRef)
+#### public void dataObjectCAS(ArrayList keys, String compare, String swap, boolean createIfKeyMissing)
 Compare and swap key-value pair. (Replace value if equal to compare param)
