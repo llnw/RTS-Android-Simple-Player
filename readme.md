@@ -31,33 +31,7 @@ Set connection listener object containing the following available callbacks:
    * Called when subscribe is called.
 * onSubscribeFail()
    * Called when subscribe fails.
-* onSubscribeInvalidHost()
-   * // TODO Not currently called
-* onSubscribeInvalidName()
-   * // TODO Not currently called 
 * onSubscribeStop()
-* onSubscribeMetadata()
-   * // TODO Not currently called
-* onSubscribeSendInvoke()
-   * // TODO Not currently called
-* onSubscribePlayUnpublish()
-   * // TODO Not currently called
-* onSubscribeConnectionClosed()
-   * // TODO Not currently called
-* onSubscribeOrientationChange()
-   * // TODO Not currently called
-* onSubscribeVolumeChange()
-   * // TODO Not currently called
-* onSubscribeTimeUpdate()
-   * // TODO Not currently called
-* onSubscribePlaybackChange()
-   * // TODO Not currently called
-* onSubscribeFullScreenChange()
-   * // TODO Not currently called
-* onSubscribeAutoplayFailure()
-   * // TODO Not currently called
-* onSubscribeAutoplayMuted()
-   * // TODO Not currently called
 * onWebRTCPeerConnectionAvailable()
    * Called when peer connection is established.
 * onWebRTCOfferStart()
