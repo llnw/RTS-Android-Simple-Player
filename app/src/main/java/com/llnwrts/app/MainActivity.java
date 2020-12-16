@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sayHello() {
         try {
-            rtcSubscriberClient.sendDataMessage("Hello World");
+            rtcSubscriberClient.sendBroadcastMessage("Hello World");
         } catch (JSONException e) {
             e.printStackTrace();
         }
