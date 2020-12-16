@@ -10,6 +10,7 @@ import android.os.CountDownTimer;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private Button subscribeButton;
     private Button incrementButton;
     private Button decrementButton;
+    private SeekBar volumeBar;
     private LLVideoView view;
     private Button sayHelloButton;
     private TextView messageTextView;
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
-        SeekBar volumeBar = findViewById(R.id.volumeBar); // initiate a volume bar
+        volumeBar = findViewById(R.id.volumeBar); // initiate a volume bar
 
         volumeBar.setMax(10); // 10 maximum value for the volume bar
 
@@ -144,6 +146,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        rtcSubscriberClient.handleVolumeButton(keyCode);
+        return true;
     }
 
     private void publish() {
@@ -371,6 +379,11 @@ public class MainActivity extends AppCompatActivity {
                     LinearLayout layout = (LinearLayout) findViewById(R.id.profileButtons);
                     addProfileButton(layout, profile);
                 }
+            }
+
+            @Override
+            public void onSetVolume(int volume) {
+                volumeBar.setProgress(volume);
             }
         };
     }
