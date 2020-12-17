@@ -250,9 +250,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             configJsonObject.put("app", getPref(getString(R.string.app)));
             configJsonObject.put("host", getPref(getString(R.string.host)));
-            configJsonObject.put("edgeHost", "rts-1-lax.llnw.net");
             configJsonObject.put("protocol", "https");
-            configJsonObject.put("port", "443");
             configJsonObject.put("streamName", getPref(getString(R.string.streamName)));
 //            configJsonObject.put("validationUrl", "https://subscribe-validator.rts.llnwi.net/mmddev001/auth/v2/llnw-test-001/?ci=100&cd=100&cf=1600000000&h=c0518fc5aa957b128147545dfe45cc0f");
             rtcSubscriberClient = LLSubscriberClient.init(
@@ -277,9 +275,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             configJsonObject.put("app", "rtsv2demo");
             configJsonObject.put("host", "rts-1-lax.llnw.net");
-            configJsonObject.put("edgeHost", "rts-1-lax.llnw.net");
             configJsonObject.put("protocol", "https");
-            configJsonObject.put("port", "443");
             configJsonObject.put("streamName", "poliva-1");
             configJsonObject.put("username", "poliva-1");
             configJsonObject.put("password", "p0liv4");
