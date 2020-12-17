@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
@@ -37,7 +38,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    String TAG = "RTCSubscriber";
+    String TAG = "LLWebRTC::MainActivity";
     LLSubscriberClient rtcSubscriberClient = null;
     LLPublisherClient rtcPublisherClient = null;
     private boolean playing = false;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private Button publishButton;
     private Button configButton;
     private SharedPreferences sharedPref;
+    private AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -327,10 +329,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onDataObjectUpdateResponse(LLUpdateResponseMessage msg) {
-//                    Log.i(TAG, "onDataObjectUpdateResponse: " + msg.toString());
-//                    String text = "\n" + msg.getSender() + ": " + msg.getMessage();
-//                    count = text;
-//                    setCounter(message);
+                Log.i(TAG, "onDataObjectUpdateResponse: " +
+                        String.format(
+                                "type: %s, requestResponseCorrelationId: %s, response: %s",
+                                msg.getType(), msg.getRequestResponseCorrelationId(), msg.getResponse()
+                        ));
             }
 
             @Override
