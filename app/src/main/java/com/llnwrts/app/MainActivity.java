@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
@@ -57,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
     private Button publishButton;
     private Button configButton;
     private SharedPreferences sharedPref;
-    private AudioManager audioManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +107,9 @@ public class MainActivity extends AppCompatActivity {
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
-                rtcSubscriberClient.setVolume(progress);
+                if (rtcSubscriberClient != null) {
+                    rtcSubscriberClient.setVolume(progress);
+                }
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -196,6 +196,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onMuteToggle() {
+        if (rtcSubscriberClient == null) {
+            return;
+        }
         if (!muted) {
             rtcSubscriberClient.mute();
             muted = true;
@@ -395,7 +398,12 @@ public class MainActivity extends AppCompatActivity {
                 Button btnTag = new Button(me);
                 btnTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 btnTag.setText("Quality " + id);
-                btnTag.setId(Integer.parseInt(id));
+
+                StringBuilder sb = new StringBuilder();
+                for (char c : id.toCharArray())
+                    sb.append((int)c);
+
+                btnTag.setId(new Integer(sb.toString()));
 
                 btnTag.setOnClickListener(view -> onSetQuality(id));
 
